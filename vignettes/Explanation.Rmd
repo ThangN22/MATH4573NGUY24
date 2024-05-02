@@ -1,0 +1,76 @@
+---
+title: "What the package does"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{What the package does}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4573NGUY24)
+```
+
+# Introduction
+
+Below are a set of functions and one dataset
+
+The following functions are a list of functions made throughout this course that were put in the course' package. 
+
+## Function 1: myplot()
+
+* This function takes values in the form of x and returns heights. The returned value is used to make quadratic plots
+
+```{r}
+myplot(32)
+```
+
+
+
+## Function 2 myncurve()
+
+myncurve() takes in probability, mean, and standard deviation and returns the probability density that the value of a variable that follows the standard normal distribution is equal to x
+
+```{r}
+myncurve(mu=10,sigma=5, a=6)
+```
+
+
+## Function 3 mycltb()
+
+mycltb() takes in sample size, # of iterations, and probability and returns a histogram plot of a binomial
+
+```{r}
+mycltb(n=20,iter=10000,p=0.5)
+```
+
+
+## Function 4: mymlnorm()
+
+mymlnorm() takes in population vector, mean of population vector, and standard deviation of population vector and returns a plot of the maximum likelihood estimates for the population mean and standard deviation
+
+```{r}
+mymlnorm(x=c(10,10,11,12,12,13,16,15,15),mu=seq(10,15,length=1000),sig=seq(0.1,4,length=1000),lwd=2,labcex=1)
+```
+
+
+## Data Set: FIREDAM
+
+FIREDAM is data set representing a sample of 15 recent fires in  a large suburb of a major city is selected. The amount of damage y and the distance x between the fire and the nearest fire station are recorded for each fire.
+
+```{r}
+data("fire")
+knitr::kable(fire)
+```
+
+
+
+
+

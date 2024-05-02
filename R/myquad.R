@@ -10,4 +10,6 @@
 myquad <- function(x){
   x^2 - 5*x + 7
 }
-#comment
+
+
+# Lab4, Task8?: Find a function from the lab(s) [3 or 4], and add it in your package, document
